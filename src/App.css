@@ -1,38 +1,86 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin: 0 16px 16px 16px;
+  max-width: 400px;
+  position: relative;
+}
+
+.event:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.event .price {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  transform: rotate(-20deg);
+  font-weight: 600;
+  z-index: 9;
+}
+
+.event .image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.event .image:hover {
+  transform: scale(1.2);
+}
+
+.event .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* Es la distancia entre los elementos */
+}
+
+.event .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.event .date {
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+.event .description {
+  margin-right: 16px;
+  text-align: left;
+}
+
+.event .whatsapp {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
 }
